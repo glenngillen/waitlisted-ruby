@@ -20,7 +20,20 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Setup Waitlisted to know the URL to use to manage your reservations:
+
+```ruby
+Waitlisted.configure do |config|
+  config.url = "https://mysite.app.waitlisted.co/"
+end
+```
+
+Then create a reservation:
+
+```ruby
+@reservation = Waitlisted::Reservation.create(email: 'test@myemail.com')
+#  => #<Waitlisted::Reservation:0x00000102980258 @id="dfc56acbc7e0b249866d49fc27581816", @uuid="dfc56acbc7e0b249866d49fc27581816", @affiliate="71c1e7b5cdfd", @email="test@myemail.com", @name=nil, @position=1, @meta={"total"=>1}>
+```
 
 ## Development
 
